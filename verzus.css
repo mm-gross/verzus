@@ -1,6 +1,6 @@
-/*
- * Globals
- */
+/***********
+ * Globals *
+ ***********/
 
 /* Links */
 a,
@@ -9,25 +9,14 @@ a:hover {
     color: #fff;
 }
 
-/* Custom default button */
-.btn-secondary,
-.btn-secondary:hover,
-.btn-secondary:focus {
-    color: #333;
-    text-shadow: none;
-    /* Prevent inheritance from `body` */
-    background-color: #fff;
-    border: .05rem solid #fff;
-}
-
-
-/*
- * Base structure
- */
+/******************
+ * Base structure *
+ ******************/
 
 html,
 body {
     min-height: 100%;
+    color: #fff;
 }
 
 body {
@@ -36,11 +25,39 @@ body {
     display: -webkit-flex;
     display: -moz-box;
     display: flex;
-    /*color: #fff;*/
     background-color: #000;
     font-family: 'Source Code Pro', sans-serif;
+    font-weight: 400;
+    text-transform: lowercase;
 }
 
+/**************
+ * Components *
+ **************/
+
+.btn-outline {
+    color: #f8f9fa;
+    border-color: #f8f9fa;
+}
+
+.food-item h3 {
+    text-align: center;
+    font-weight: 200;
+}
+
+.food-notice, .food-block .food-item {
+    padding:1rem;
+    border: 1px solid #fff;
+    height:100%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+@media (prefers-color-scheme: light) {
+    .food-notice, .food-block .food-item {
+        border: 2px solid #000;
+    }
+}
 
 /*
  * Footer
@@ -49,37 +66,6 @@ body {
     color: rgba(255, 255, 255, .5);
 }
 
-.overlay {
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    z-index: 100;
-
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: flex;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -moz-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-
-    -webkit-backdrop-filter: blur(5px);
-    backdrop-filter: blur(5px);
-}
-
-.redband {
-    width: 100%;
-    background-color: #da0000;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    padding: 1em 0 0;
-}
 
 @media (prefers-color-scheme: light) {
     body {
@@ -87,21 +73,20 @@ body {
         background-color: #fff;
     }
 
-    .btn-secondary,
-    .btn-secondary:hover,
-    .btn-secondary:focus {
-        color: #333;
-        text-shadow: none;
-        /* Prevent inheritance from `body` */
-        background-color: #fff;
-        border: .05rem solid #fff;
+    .btn-outline {
+        color: #f8f9fa;
+        border-color: #f8f9fa;
     }
-    
+
+    .logo {
+        filter: invert();
+    }
+
     a,
-a:focus,
-a:hover {
-    color: #000;
-}
+    a:focus,
+    a:hover {
+        color: #000;
+    }
 
     .mastfoot {
         color: rgba(0, 0, 0, .5);
