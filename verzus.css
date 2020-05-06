@@ -26,6 +26,11 @@ body {
     text-transform: lowercase;
 }
 
+.col {
+    padding-top:15px;
+    padding-bottom:15px;
+}
+
 /**************
  * Components *
  **************/
@@ -38,18 +43,15 @@ body {
 .food-notice,
 .food-block .food-item {
     padding: 1rem;
+  /*  padding-bottom: 3em; */
     border: 1px solid #fff;
     height: 100%;
     margin-top: 15px;
     margin-bottom: 15px;
 }
 
-@media (prefers-color-scheme: light) {
-
-    .food-notice,
-    .food-block .food-item {
-        border: 2px solid #000;
-    }
+.btn {
+    white-space: nowrap;
 }
 
 /*
@@ -59,14 +61,10 @@ body {
     color: rgba(255, 255, 255, .5);
 }
 
-.btn.btn-dark {
-    display: none;
-}
 
-.btn.btn-light {
-    display: inline-block;
-}
-
+/*
+ * Footer
+ */
 @media (prefers-color-scheme: light) {
     body {
         color: #000;
@@ -86,5 +84,10 @@ body {
 
     .mastfoot {
         color: rgba(0, 0, 0, .5);
+    }
+    
+    .food-notice,
+    .food-block .food-item {
+        border: 2px solid #000;
     }
 }
