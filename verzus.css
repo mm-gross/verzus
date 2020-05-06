@@ -20,11 +20,6 @@ body {
 }
 
 body {
-    display: -ms-flexbox;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: flex;
     background-color: #000;
     font-family: 'Source Code Pro', sans-serif;
     font-weight: 400;
@@ -34,11 +29,6 @@ body {
 /**************
  * Components *
  **************/
-
-.btn-outline {
-    color: #f8f9fa;
-    border-color: #f8f9fa;
-}
 
 .food-item h3 {
     text-align: center;
